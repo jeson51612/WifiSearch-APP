@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">STOCK APP</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">My Studio</string>
+    <string name="nav_header_subtitle">Jeson_Deng Test</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">首頁</string>
+    <string name="menu_wifi_search">Wifi搜尋</string>
+    <string name="menu_wifi_controller">Wifi控制</string>
+</resources>

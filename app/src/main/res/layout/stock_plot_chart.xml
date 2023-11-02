@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.StockChart.StockChartfragment"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="4dp">
+
+    <ProgressBar
+        android:id="@+id/idPgBarWait"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ProgressBar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/idRLHome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Stocksellprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="192dp"
+            android:text="TextView"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/chart_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="28dp"
+            android:text="賣出"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/Stockpercent"
+            app:layout_constraintStart_toStartOf="@+id/Stocksellprice"
+            app:layout_constraintTop_toTopOf="@+id/Stockcode" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="K線"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="@+id/textView12"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/Stockbuyprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="6dp"
+            android:text="TextView"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/Stocksellprice"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:text="零股"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView11"
+            app:layout_constraintStart_toStartOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="9dp"
+            android:text="買進"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/Stockbuyprice"
+            app:layout_constraintEnd_toEndOf="@+id/Stockbuyprice" />
+
+        <TextView
+            android:id="@+id/Stockstate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="14dp"
+            android:text="TextView"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/difference_value" />
+
+        <TextView
+            android:id="@+id/Stockcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="70dp"
+            android:text="TextView"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/chart_line"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Stockpercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/difference_value"
+            app:layout_constraintTop_toBottomOf="@+id/Stocknowprice" />
+
+        <TextView
+            android:id="@+id/difference_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="TextView"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Stockpercent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/Stocknowprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/Stockpercent"
+            app:layout_constraintStart_toStartOf="@+id/Stockpercent"
+            app:layout_constraintTop_toBottomOf="@+id/Stockcode" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart_line"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Stocksellprice" />
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginEnd="1dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/tableRow4"
+            app:layout_constraintStart_toStartOf="@+id/chart_line"
+            app:layout_constraintTop_toBottomOf="@+id/Stockstate">
+
+            <TextView
+                android:id="@+id/Stockaverageprice"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/StockAmplitudeprice"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/Stock_single_quantity_price"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="360dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="9dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/chart_line"
+            app:layout_constraintTop_toBottomOf="@+id/tableRow3">
+
+            <TextView
+                android:id="@+id/Stockopenprice"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/StockyesterDayprice"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/Stock_total_amount"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </TableRow>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
